@@ -138,9 +138,10 @@ export const ChartItemList=(props:ChartItemListProps)=>{
                     chart.hideErrors=props.hideErrors;
                 }
                 setItemList(charts);
-                if (charts.length > 0){
-                    setLoading(false);
-                }
+                // An empty chart directory is a valid state. Keeping the
+                // loading flag set here leaves the chart selector spinning
+                // forever and hides the empty-state controls.
+                setLoading(false);
             }
             if (props.autoreload){ timer.startTimer(seq)}
         },
