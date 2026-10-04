@@ -1,5 +1,5 @@
 {
-  "description": "The system default layout. No keys and no properties.",
+  "description": "Waco Marine helm, sonar, and navigation layout.",
   "layoutVersion":1,
   "properties":{
     "layers":{
@@ -9,205 +9,46 @@
   "widgets": {
     "gpspage1": {
       "left": [
-        {
-          "name": "BRG",
-          "weight": 1.5
-        },
-        {
-          "name": "DST",
-          "weight": 1.5
-        },
-        {
-          "name": "XteDisplay",
-          "compareState": true,
-          "weight": 1
-        },
-        {
-          "name": "ETA"
-        },
-        {
-          "name": "RteCombine"
-        }
-      ],
-      "left_anchor": [
-        {
-          "name": "AnchorBearing",
-          "weight": 1.5
-        },
-        {
-          "name": "AnchorDistance",
-          "weight": 1.5
-        },
-        {
-          "name": "AnchorWatchDistance"
-        },
-        {
-          "name": "DepthBelowTransducer"
-        },
-        {
-          "name": "Empty"
-        }
+        {"name": "HDT", "caption": "HEADING", "weight": 1.6, "className": "gx-primary"},
+        {"name": "SOG", "caption": "SPEED OVER GROUND", "weight": 1.6},
+        {"name": "userDepth", "caption": "DEPTH", "weight": 1.6},
+        {"name": "WindAngle", "caption": "APPARENT WIND"},
+        {"name": "WindSpeed", "caption": "WIND SPEED"}
       ],
       "right": [
-        {
-          "name": "COG",
-          "weight": 1.5
-        },
-        {
-          "name": "SOG",
-          "weight": 1.5
-        },
-        {
-          "name": "TimeStatus"
-        },
-        {
-          "name": "Position"
-        },
-        {
-          "name": "AisTarget"
-        }
+        {"name": "COG", "caption": "COURSE OVER GROUND", "weight": 1.6, "className": "gx-primary"},
+        {"name": "Position", "caption": "VESSEL POSITION", "weight": 1.4, "className": "mono"},
+        {"name": "GNSSStatus", "caption": "GPS FIX"},
+        {"name": "AisTarget", "weight": 1.5},
+        {"name": "DateTime", "caption": "SYSTEM TIME"}
       ]
     },
     "gpspage2": {
       "left": [
-        {
-          "name": "BRG",
-          "weight": 1.5
-        },
-        {
-          "name": "DST",
-          "weight": 0.75
-        },
-        {
-          "name": "SOG",
-          "weight": 0.75
-        },
-        {
-          "name": "DepthBelowTransducer"
-        },
-        {
-          "name": "ETA"
-        },
-        {
-          "name": "RteCombine"
-        }
-      ],
-      "left_anchor": [
-        {
-          "name": "AnchorBearing",
-          "weight": 1.5
-        },
-        {
-          "name": "AnchorDistance",
-          "weight": 1.5
-        },
-        {
-          "name": "AnchorWatchDistance"
-        },
-        {
-          "name": "DepthDisplay"
-        },
-        {
-          "name": "Empty"
-        }
+        {"name": "userDepth", "caption": "DEPTH BELOW TRANSDUCER", "weight": 1.2},
+        {"name": "userDepthHistory", "caption": "SONAR HISTORY", "weight": 4.8}
       ],
       "right": [
-        {
-          "name": "COG",
-          "weight": 1.5
-        },
-        {
-          "name": "WindGraphics",
-          "weight": 2.5
-        },
-        {
-          "name": "DateTime"
-        },
-        {
-          "name": "AisTarget"
-        }
+        {"name": "SOG", "caption": "SPEED", "weight": 1.2},
+        {"name": "HDT", "caption": "HEADING", "weight": 1.2},
+        {"name": "STW", "caption": "SPEED THROUGH WATER"},
+        {"name": "WaterTemp", "caption": "WATER TEMPERATURE"},
+        {"name": "WindDisplay", "weight": 1.8},
+        {"name": "Position", "caption": "POSITION", "className": "mono"}
       ]
     },
     "gpspage3": {
       "left": [
-        {
-          "name": "BRG",
-          "caption": "BRG",
-          "unit": "°",
-          "formatterParameters": [
-            ""
-          ]
-        },
-        {
-          "name": "COG",
-          "caption": "COG",
-          "unit": "°",
-          "formatterParameters": [
-            ""
-          ]
-        },
-        {
-          "name": "NmeaStatus"
-        },
-        {
-          "name": "radGauge_Compass",
-          "caption": "COG",
-          "unit": "°",
-          "storeKeys": {
-            "value": "nav.gps.course"
-          },
-          "formatterParameters": [
-            ""
-          ],
-          "drawValue": true,
-          "valueFontFactor": 12,
-          "weight": 3
-        }
+        {"name": "radGauge_Compass", "caption": "HEADING", "storeKeys": {"value": "nav.gps.course"}, "drawValue": true, "colorText": "#d9edf8", "colorNeedle": "#ff5a52", "colorPlate": "rgba(2,10,16,0.35)", "borders": false, "weight": 3},
+        {"name": "WindGraphics", "weight": 2},
+        {"name": "userDepth", "caption": "DEPTH"}
       ],
       "right": [
-        {
-          "name": "DST",
-          "caption": "DST",
-          "unit": "nm",
-          "formatterParameters": [
-            ""
-          ]
-        },
-        {
-          "name": "VMG",
-          "caption": "VMG",
-          "unit": "kn",
-          "formatterParameters": [
-            ""
-          ]
-        },
-        {
-          "name": "SOG",
-          "caption": "SOG",
-          "unit": "kn",
-          "formatterParameters": [
-            ""
-          ]
-        },
-        {
-          "name": "radGauge_Speed",
-          "storeKeys": {
-            "value": "nav.gps.speed"
-          },
-          "formatterParameters": [
-            ""
-          ],
-          "drawValue": true,
-          "valueFontFactor": 12,
-          "colorPlate": "#fff",
-          "minValue": 0,
-          "maxValue": "10",
-          "colorHighlight": "rgba(200, 50, 50, .75)",
-          "startHighlight": "6",
-          "weight": 3,
-          "caption": "SOG",
-          "unit": "kn"
-        }
+        {"name": "radGauge_Speed", "caption": "SPEED", "unit": "kn", "storeKeys": {"value": "nav.gps.speed"}, "drawValue": true, "minValue": 0, "maxValue": 12, "startHighlight": 9, "colorText": "#d9edf8", "colorNeedle": "#ff5a52", "colorPlate": "rgba(2,10,16,0.35)", "weight": 3},
+        {"name": "COG", "caption": "COURSE"},
+        {"name": "SOG", "caption": "SPEED"},
+        {"name": "NmeaStatus", "caption": "DATA SOURCES"},
+        {"name": "DateTime", "caption": "TIME"}
       ]
     },
     "navpage": {
@@ -222,29 +63,22 @@
           "name": "WindDisplay"
         },
         {
-          "name": "DepthBelowTransducer"
+          "name": "userDepth"
         },
         {
           "name": "AisTarget"
         },
         {
-          "name": "ActiveRoute"
-        },
-        {
           "name": "LargeTime"
         }
       ],
-      "left_small": [
-        {
-          "name": "ActiveRoute"
-        }
-      ],
+      "left_small": [],
       "top_small": [
         {
           "name": "WindDisplay"
         },
         {
-          "name": "DepthBelowTransducer"
+          "name": "userDepth"
         },
         {
           "name": "AisTarget"
@@ -258,16 +92,20 @@
       ],
       "bottomLeft": [
         {
-          "name": "BRG"
+          "name": "userDepth",
+          "caption": "DEPTH"
         },
         {
-          "name": "DST"
+          "name": "WindSpeed",
+          "caption": "WIND"
         },
         {
-          "name": "ETA"
+          "name": "HDT",
+          "caption": "HEADING"
         },
         {
-          "name": "WpPosition"
+          "name": "WaterTemp",
+          "caption": "WATER"
         }
       ],
       "bottomRight": [
@@ -278,7 +116,7 @@
           "name": "SOG"
         },
         {
-          "name": "TimeStatus"
+          "name": "GNSSStatus"
         },
         {
           "name": "Position"

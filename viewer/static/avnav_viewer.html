@@ -50,8 +50,10 @@
               right: 0;
               bottom: 0;
               z-index: 999;
-              background-color: #546E7A;
-              color: white;
+              background:
+                radial-gradient(circle at 50% 45%, rgba(19, 67, 101, 0.72), transparent 24%),
+                linear-gradient(145deg, #07131c, #010304 72%);
+              color: #d7efff;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -61,10 +63,12 @@
               scale: 1;
           }
           #splash .loading {
-              font-weight: bold;
+              font-weight: 800;
               display: inline-block;
-              font-family: monospace;
-              font-size: 30px;
+              font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+              font-size: 13px;
+              letter-spacing: 0.18em;
+              text-transform: uppercase;
               clip-path: inset(0 3ch 0 0);
               animation: l 1s steps(4, jump-none) infinite;
           }
@@ -97,7 +101,7 @@
 
   <body  >
   <div id="splash">
-      <div class="loading">AvNav is loading ...</div>
+      <div class="loading">Waco Marine // Loading ...</div>
   </div>
   <div id="new_pages"></div>
   <script type="text/javascript">console.log("body loaded")</script>
