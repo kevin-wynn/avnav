@@ -9,18 +9,16 @@
   "widgets": {
     "gpspage1": {
       "left": [
-        {"name": "HDT", "caption": "HEADING", "weight": 1.6, "className": "gx-primary"},
-        {"name": "SOG", "caption": "SPEED OVER GROUND", "weight": 1.6},
-        {"name": "userDepth", "caption": "DEPTH", "weight": 1.6},
-        {"name": "WindAngle", "caption": "APPARENT WIND"},
-        {"name": "WindSpeed", "caption": "WIND SPEED"}
+        {"name": "userDepth", "caption": "DEPTH BELOW TRANSDUCER", "weight": 3.2},
+        {"name": "userDepthHistory", "caption": "BOTTOM HISTORY", "weight": 4.6},
+        {"name": "userWaterTemp", "caption": "WATER TEMPERATURE", "weight": 1.2}
       ],
       "right": [
-        {"name": "COG", "caption": "COURSE OVER GROUND", "weight": 1.6, "className": "gx-primary"},
-        {"name": "Position", "caption": "VESSEL POSITION", "weight": 1.4, "className": "mono"},
-        {"name": "GNSSStatus", "caption": "GPS FIX"},
-        {"name": "AisTarget", "weight": 1.5},
-        {"name": "DateTime", "caption": "SYSTEM TIME"}
+        {"name": "HDT", "caption": "HEADING", "weight": 1.6},
+        {"name": "SOG", "caption": "BOAT SPEED", "weight": 1.6},
+        {"name": "WindDisplay", "caption": "WIND", "weight": 1.8},
+        {"name": "Position", "caption": "POSITION", "weight": 1.3, "className": "mono"},
+        {"name": "GNSSStatus", "caption": "GPS / SONAR STATUS", "weight": 1.2}
       ]
     },
     "gpspage2": {
@@ -32,7 +30,7 @@
         {"name": "SOG", "caption": "SPEED", "weight": 1.2},
         {"name": "HDT", "caption": "HEADING", "weight": 1.2},
         {"name": "STW", "caption": "SPEED THROUGH WATER"},
-        {"name": "WaterTemp", "caption": "WATER TEMPERATURE"},
+        {"name": "userWaterTemp", "caption": "WATER TEMPERATURE"},
         {"name": "WindDisplay", "weight": 1.8},
         {"name": "Position", "caption": "POSITION", "className": "mono"}
       ]
@@ -58,18 +56,6 @@
         },
         {
           "name": "Zoom"
-        },
-        {
-          "name": "WindDisplay"
-        },
-        {
-          "name": "userDepth"
-        },
-        {
-          "name": "AisTarget"
-        },
-        {
-          "name": "LargeTime"
         }
       ],
       "left_small": [],
@@ -104,7 +90,7 @@
           "caption": "HEADING"
         },
         {
-          "name": "WaterTemp",
+          "name": "userWaterTemp",
           "caption": "WATER"
         }
       ],
